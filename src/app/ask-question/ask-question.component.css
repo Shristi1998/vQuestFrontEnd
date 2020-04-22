@@ -1,0 +1,27 @@
+.questionForm{
+    margin-left:200px;
+    margin-top: 50px;
+    border: 1px solid black;
+    height: 900px;
+    width: 800px;
+}
+.tags{
+    height: 100px;
+    width: 100px;
+}
+.body{
+    height: 500px;
+    width: 760px;
+}
+.labels{
+    font-weight: bold;
+    font-size: large;
+}
+.boundary{
+    margin-left: 50px;
+}
+.heading{
+    margin-left: 200px;
+    margin-top: 30px;
+    font-weight: bold;
+}

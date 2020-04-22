@@ -1,0 +1,54 @@
+<div>
+  <clr-wizard #wizardlg [(clrWizardOpen)]="lgOpen" clrWizardSize="lg">
+  <clr-wizard-title>Initial Preferences</clr-wizard-title>
+
+  <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+  <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+  <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+  <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+
+  <clr-wizard-page>
+      <ng-template clrPageTitle>BU</ng-template>
+      <app-bu-preference></app-bu-preference>
+  </clr-wizard-page>
+
+  <clr-wizard-page>
+      <ng-template clrPageTitle>Interests for Q&A</ng-template> 
+      <app-qa-interest></app-qa-interest>
+  </clr-wizard-page>
+
+  <clr-wizard-page>
+      <ng-template clrPageTitle>Interests for Blogs</ng-template>
+      <app-blog-interest></app-blog-interest>
+  </clr-wizard-page>
+  
+</clr-wizard>
+</div>
+<header class="header-6">
+    <div class="branding">
+        <a href="..." class="nav-link">
+            <clr-icon shape="vm-bug"></clr-icon>
+            <span class="title">vQuest</span>
+        </a>
+    </div>
+    <div class="header-nav">
+        <a href="..." routerLinkActive="active" class="nav-link"><span class="nav-text">Home</span></a>
+        <a href="..." routerLinkActive="active" class="nav-link"><span class="nav-text">Blogs</span></a>
+        <a routerLink="/questionspage" routerLinkActive="active" class="nav-link"><span class="nav-text">Ques & Ans</span></a>
+    </div>
+    <form class="search">
+        <label for="search_input">
+            <input id="search_input" type="text" placeholder="Search for answers ...">
+        </label>
+    </form>
+    <div class="notification">
+        <clr-icon shape="bell" size=24></clr-icon>
+    </div>
+    <div class="header-actions">
+        <a href="javascript://" class="nav-link nav-icon-text">
+            <clr-icon shape="user"></clr-icon>
+            <span class="nav-text">username</span>
+        </a>
+    </div>
+</header>
+<router-outlet></router-outlet>
