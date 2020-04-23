@@ -1,0 +1,41 @@
+
+
+.votes, .answers, .views{
+    min-width: 0px !important;
+    padding: 0.1rem;
+    text-align: center;
+    font-size: x-small;
+}
+
+.answered{
+    border: 0.05rem solid rgb(113, 219, 139);
+    border-radius: 0.1rem;
+}
+
+.accepted{
+    border: none;
+    background: rgb(46, 150, 72);
+    color: white;
+}
+.question{
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    border-bottom: 0.3px solid gray;
+}
+
+.number{
+    font-size: medium;
+}
+
+.question_body{
+    font-size: medium;
+    margin-bottom: 0.2rem;
+}
+
+.btn-filter{
+    background: #b6d8ff;
+}
+
+.question_tags{
+    margin-top: 0.3rem;
+}
