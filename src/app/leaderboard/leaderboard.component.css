@@ -1,0 +1,12 @@
+.user-image > *, .champion > *{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+h3, h2, h4{
+    margin: 0px;
+}
+
+.user{
+    padding: 1rem;
+}

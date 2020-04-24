@@ -19,6 +19,15 @@ export class QuestionMainComponent implements OnInit {
     let path = 'http://localhost/Server/api/qahome?userid=' + userId; 
     this.http.get(path).subscribe((data: Array<Question>)=>{
       this.questions = data;
+      for(let i = 0; i < data.length; i++){
+        this.http
+        .get('http://localhost/Server/api/questionandtopic?questionId='+this.questions[i].question_id)
+        .subscribe((res: QuestionTags)=>{
+          console.log(res);
+          this.questions[i].question_tag_id = res.topicId;
+          this.questions[i].question_tag_name = res.topicName;
+        })
+      }
     })
 
     // Non HTTP questions for testing
@@ -43,4 +52,12 @@ class Question{
   first_answer_supports: number;
   first_answer_challenges: number;
   first_answer_timestamp: string;
+  question_tag_id: Array<number>;
+  question_tag_name: Array<string>;
+}
+
+class QuestionTags{
+  questionId: number;
+  topicId: number;
+  topicName: string;
 }

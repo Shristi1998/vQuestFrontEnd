@@ -20,9 +20,32 @@
             </section>
         </nav>
         <div class="content-area">
-            <h1>Questions</h1>
+            <h1>Leaderboard</h1>
             <br>
-            
+            <div class="clr-row-user">
+                <div class="grp">
+                    <div class="btn-group">
+                        <button class="btn" [ngClass]="{'btn-primary': buttonFilter==1}" (click)="filter($event, 1)">XP</button>
+                        <button class="btn" [ngClass]="{'btn-primary': buttonFilter==2}" (click)="filter($event, 2)">Questions</button>
+                        <button class="btn" [ngClass]="{'btn-primary': buttonFilter==3}" (click)="filter($event, 3)">Answers</button>
+                    </div>
+                </div>
+            </div>
+            <div class="clr-row user" *ngFor="let user of users; let i = index">
+                <div class="clr-col-1 user-image">
+                    <img src="{{user.user_image_url}}" *ngIf="user.user_image_url != 'None'"/>
+                    <img src="../../assets/default-user.png" *ngIf="user.user_image_url == 'None'"/>
+                </div>
+                <div class="clr-col-6">
+                    <h3>{{user.user_full_name}}</h3>
+                    <h4>{{user.xp_points}} XP   </h4>
+                    <h4>{{user.questions_asked}} Questions Asked   </h4>
+                    <h4>{{user.answers_given}} Answers given</h4>
+                </div> 
+                <!-- <div class="clr-col-2 champion">
+                    <img src="../../assets/goldcrown.jpg" *ngIf="i==0"/>
+                </div> -->
+            </div>
         </div>
     </div>
 

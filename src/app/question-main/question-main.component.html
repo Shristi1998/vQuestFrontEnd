@@ -69,11 +69,8 @@
                     </div>
                     <div class="clr-row">
                         <div class="question_tags">
-                            <a href="..." class="label label-grey clickable">
-                                C#
-                            </a>
-                            <a href="..." class="label label-grey clickable">
-                                ASP.NET
+                            <a href="#" class="label label-grey clickable" *ngFor="let tag of question.question_tag_name">
+                                {{tag}}
                             </a>
                             
                         </div>
