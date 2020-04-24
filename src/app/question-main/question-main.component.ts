@@ -11,7 +11,7 @@ export class QuestionMainComponent implements OnInit {
   questions: Array<any>;
 
   anything: any;
-  
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {

@@ -29,38 +29,23 @@
                     <li>Choose the appropriate tags to which the question may belong.</li>
                 </ul>
                 </div>
-            <div class="questionForm">
-                
-                <form>
+                <div class="questionForm">
+                    <form clrForm [formGroup]="askForm" class="askForm">
+                        <clr-input-container>
+                            <label for="QuestionTitle">Title:</label>
+                            <input type= "text" name="QuestionTitle" clrInput formControlName="QuestionTitle" class="form-control"
+                              [(ngModel)]="askFormObj.QuestionTitle" required />
+                            <clr-control-error>This field is required!</clr-control-error>
+                        </clr-input-container>
+                        <clr-input-container>
+                            <label for="QuestionDescription">Body</label>
+                            <textarea type= "text" clrInput formControlName="QuestionDescription" class="form-control"  
+                            [(ngModel)]="askFormObj.QuestionDescription" required name="QuestionDescription" class="textareabox"></textarea>
+                            <clr-control-error>This field is required!</clr-control-error>              
+                        </clr-input-container>
                     <br>
-                <label class="labels" style="margin-left: 20px;">Title</label>
-                <input clrInput type="text" name="title" style="margin-left: 20px; column-span:400px" />
-                <br><br>
-            
-                <label class="labels" style="margin-left: 20px;">Body</label>
-                <textarea clrTextarea name="description" required style="margin-left: 20px;" class="body">
-                </textarea>
-                <br><br>
-            
-                <label class="labels" style="margin-left: 20px;">Tags</label>
-                <br>
-                <a href="#" class="label label-purple clickable" style="margin-left: 20px;">
-                   Angular
-                </a>
-                <a href="..." class="label label-blue clickable"style="margin-left: 20px;">
-                    C#
-                </a>
-                <a href="..." class="label label-orange clickable" style="margin-left: 20px;">
-                    Docker
-                </a>
-                <a href="..." class="label label-light-blue clickable" style="margin-left: 20px;">
-                    NodeJs
-                </a>
-                <a href="..." class="label clickable" style="margin-left: 20px;">
-                    Database Systems
-                </a><br><br>
-                <button class="btn btn-primary" style="margin-left: 20px;"
-                >Submit</button>
+                    <button type="submit" 
+                    class="btn btn-success-outline" (click)="submitQuestion()">Submit</button>
                 </form>
                 </div>
         </div>

@@ -6,13 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./questions-page.component.css']
 })
 export class QuestionsPageComponent implements OnInit {
-  askButton: boolean = false;
-  
-  constructor() { }
+ constructor() { }
 
   ngOnInit(): void {
-  }
-  if(){
-    this.askButton = true;
   }
 }

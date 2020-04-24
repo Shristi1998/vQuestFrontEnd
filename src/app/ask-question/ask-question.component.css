@@ -2,7 +2,7 @@
     margin-left:200px;
     margin-top: 50px;
     border: 1px solid black;
-    height: 900px;
+    height: 300px;
     width: 800px;
 }
 .tags{
@@ -24,4 +24,8 @@
     margin-left: 200px;
     margin-top: 30px;
     font-weight: bold;
+}
+.textareabox{
+    height: 500px;
+    width: 500px;
 }

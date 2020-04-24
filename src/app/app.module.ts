@@ -14,6 +14,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { QuestionMainComponent } from './question-main/question-main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,9 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     ClarityModule,
     BrowserAnimationsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
